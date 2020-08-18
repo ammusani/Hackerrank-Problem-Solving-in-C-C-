@@ -1,0 +1,38 @@
+/*
+https://www.hackerrank.com/challenges/apple-and-orange/problem?isFullScreen=true
+*/
+
+#include <stdio.h>
+
+int main() {
+    int s;
+    int t;
+    scanf("%d%d", &s, &t);
+    int a;
+    int b;
+    scanf("%d%d", &a, &b);
+    int m;
+    int n;
+    scanf("%d%d", &m, &n);
+
+    int l;
+    int count = 0;
+    while(m) {
+        scanf("%d", &l);
+        l += a;
+        if (l >= s && l <= t) count++;
+        m--;
+    }
+    printf("%d\n", count);
+
+    count = 0;
+    while(n) {
+        scanf("%d", &l);
+        l += b;
+        if (l >= s && l <= t) count++;
+        n--;
+    }
+    printf("%d\n", count);
+    
+    return 0;
+}
